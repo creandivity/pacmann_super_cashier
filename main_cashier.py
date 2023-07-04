@@ -12,6 +12,9 @@ trnsct123 = Transaction()
 print("Case 1 : menambahkan item baru")
 trnsct123.add_item("Ayam Goreng", 2, 20000)
 trnsct123.add_item("Pasta Gigi", 3, 15000)
+trnsct123.add_item("", 0, 15000)
+trnsct123.check_order()
+trnsct123.delete_item("")
 trnsct123.check_order()
 print("")
 
@@ -36,6 +39,7 @@ print("")
 #Case 3 : Reset Transaction
 print("Case 3 : Reset Transaction")
 trnsct123.reset_transaction()
+trnsct123.check_order()
 print("")
 
 #Case 4
