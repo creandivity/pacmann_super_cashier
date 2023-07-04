@@ -99,7 +99,7 @@ Menggunakan fitur .clear() untuk menghapus seluruh isi list
         print('Selesai melakukan reset transaction')    
 ```
 ### Procedure Check Order
-![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/update_item_price.png)
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/check_order.png)
 #### Snippet
 ```python
     # function check order untuk menampilkan isi orderan
@@ -120,7 +120,7 @@ Menggunakan fitur .clear() untuk menghapus seluruh isi list
                 print("Terdapat kesalahan item yang tidak memiliki nama")                    
 ```
 ### Procedure Total Price
-![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/update_item_price.png)
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/total_price.png)
 #### Snippet
 ```python
     # function total_price untuk menghitung total belanjaan dan discount
@@ -150,4 +150,68 @@ Menggunakan fitur .clear() untuk menghapus seluruh isi list
             print("Anda mendapatkan discount sebesar ", discount_amount)
         print("Total belanja yang harus dibayarkan adalah ", (subtotal-discount_amount))               
 ```
-## 5. Hasil Test Case
+## 4. Hasil Test Case
+### Test Case 1
+Customer menambahkan 2 item baru menggunakan method add_item(). 
+Itemnya:
+Ayam Goreng, Qty 2, Harga 20.000
+Pasta Gigi, Qty 3, Harga 15.000
+### Snippet
+```python
+#Case 1 : menambahkan add item
+trnsct123 = Transaction()
+print("Case 1 : menambahkan item baru")
+trnsct123.add_item("Ayam Goreng", 2, 20000)
+trnsct123.add_item("Pasta Gigi", 3, 15000)
+trnsct123.add_item("", 0, 15000)
+trnsct123.check_order()
+trnsct123.delete_item("")
+trnsct123.check_order()
+print("")
+```
+### Result
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/python_case1.png)
+
+### Test Case 2
+Customer menghapus item pasta gigi
+### Snippet
+```python
+#Case 2 : Menghapus pasta gigi
+print("Case 2 : Menghapus item pasta gigi")
+trnsct123.delete_item("Pasta Gigi")
+trnsct123.check_order()
+print("")
+```
+### Result
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/python_case2.png)
+
+### Test Case 3
+Customer menghapus item pasta gigi
+### Snippet
+```python
+#Case 2 : Menghapus pasta gigi
+print("Case 2 : Menghapus item pasta gigi")
+trnsct123.delete_item("Pasta Gigi")
+trnsct123.check_order()
+print("")
+```
+### Result
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/python_case3.png)
+
+### Test Case 4
+Customer melakukan print dan menghitung total dengan total_price, serta menginfokan discount
+### Snippet
+```python
+#Case 4
+print("Case 4 : Mencoba total price")
+trnsct123.add_item("Ayam Goreng", 2, 20000)
+trnsct123.add_item("Pasta Gigi", 3, 15000)
+trnsct123.add_item("Mainan Mobil", 1, 200000)
+trnsct123.add_item("Mi Instan", 5, 3000)
+trnsct123.check_order()
+trnsct123.total_price()
+print("")
+```
+### Result
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/python_case4.png)
+
