@@ -32,4 +32,22 @@
         self.data_item.append([nama, qty, harga, qty * harga])
         print('Penambahan data item berhasil')
 ```
+### Procedure Update Item Name
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/update_item_name.png)
+#### Snippet
+```python
+    # function index_item untuk mencari index list berdasarkan nama item        
+    def index_item(self, nama):
+        for i in range(len(self.data_item)):
+            if nama == self.data_item[i][0]:
+                return i        
+                
+    # function update_item_name untuk mengupdate nama item di dalam list yang sudah ada
+    def update_item_name(self, nama, nama_baru):
+        try:
+            # dengan memakai index_item untuk mencari isi dari list yg sama dengan nama
+            self.data_item[self.index_item(nama)][0] = nama_baru
+        except TypeError:
+            print('data item tidak ada')
+```
 ## 5. Hasil Test Case
