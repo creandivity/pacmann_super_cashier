@@ -12,7 +12,23 @@
    - Procedure check_order : Melakukan pengecekan terhadap order dan menampilkan list order.
    - Procedure total_price() : Menghitung total item yang dibeli dan discount yang diperoleh customer.
   
-## 3. Alur Program/Flowchart
+## 3. Alur Program/Flowchart dan Snippet Function
 ### Procedure Add Item
-## 4. Penjelasan Function
+#### Snippet
+```python
+    # Function add item untuk menambahkan item baru ke dalam list
+    def add_item(self, nama, qty, harga):
+        # nama = input('Masukan Nama Item: ')
+        # qty = int(input('Masukan Qty: '))
+        # harga = int(input('Masukan Harga: '))         
+        for i in range(len(self.data_item)):
+            #Lakukan pengecekan. Jika sebelumnya sudah ada, maka print error message
+            if nama == self.data_item[i][0]:
+                print('data item sudah ada, \
+                      silahkan lakukan proses update jumlah')
+        # Jika belum ada item tsb di list, maka append ke dalam list
+        # di kolom terakhir, untuk menyimpan subtotal, dari perkalian qty * harga per unit
+        self.data_item.append([nama, qty, harga, qty * harga])
+        print('Penambahan data item berhasil')
+```
 ## 5. Hasil Test Case
