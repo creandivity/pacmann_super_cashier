@@ -14,6 +14,7 @@
   
 ## 3. Alur Program/Flowchart dan Snippet Function
 ### Procedure Add Item
+![Add Item](https://github.com/creandivity/pacmann_super_cashier/blob/main/img/add_item_flowchart.png)
 #### Snippet
 ```python
     # Function add item untuk menambahkan item baru ke dalam list
